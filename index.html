@@ -35,9 +35,12 @@
         
         /* Grille de Cartes pour les Projets */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px; }
-        .project-card { background: #1e293b; padding: 25px; border-radius: 12px; border: 1px solid #334155; transition: transform 0.3s, border-color 0.3s; }
+        .project-card { background: #1e293b; padding: 25px; border-radius: 12px; border: 1px solid #334155; transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
         .project-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
         
+        /* Style des images de projet */
+        .project-img { width: 100%; max-height: 180px; object-fit: cover; border-radius: 8px; margin: 15px 0; border: 1px solid #334155; }
+
         /* Badges de Technologies */
         .tech-tags { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px; }
         .tag { background: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; font-weight: 600; }
@@ -135,7 +138,7 @@
                         <li><strong>Français :</strong> Courant</li>
                         <li><strong>Anglais :</strong> Technique</li>
                         <li><strong>Berbère (Kabyle) :</strong> Langue maternelle</li>
-                        <li><strong>Arabe :</strong> Courant</li>
+                        <li><strong>Arabe :</strong> Bon niveau</li>
                     </ul>
                 </div>
 
@@ -147,21 +150,27 @@
             <div class="projects-grid">
                 
                 <div class="project-card">
-                    <h3>Cryptanalyse différentielle sur réseau SPN</h3>
-                    <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Projet de fin d'études - Master</p>
-                    <p>Étude et mise en œuvre d'attaques par cryptanalyse différentielle pour évaluer la robustesse des structures de chiffrement par blocs (Substitution-Permutation Network).</p>
+                    <div>
+                        <h3>Cryptanalyse différentielle sur réseau SPN</h3>
+                        <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Projet de fin d'études - Master</p>
+                        
+                        <img src="Capture%20d'écran%202026-05-23%20133123.png" alt="Cryptanalyse différentielle" class="project-img">
+                        
+                        <p>Étude et mise en œuvre d'attaques par cryptanalyse différentielle pour évaluer la robustesse des structures de chiffrement par blocs (Substitution-Permutation Network).</p>
+                    </div>
                     <div class="tech-tags">
                         <span class="tag">Sécurité</span>
                         <span class="tag">Cryptographie</span>
                         <span class="tag">Mathématiques</span>
-                        <span class="tag">Python</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Analyse prédictive & Text Mining</h3>
-                    <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Juin 2024</p>
-                    <p>Développement de modèles d'analyse de sentiments et d'extraction d'opinions appliqués à des bases de données textuelles complexes.</p>
+                    <div>
+                        <h3>Analyse prédictive & Text Mining</h3>
+                        <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Juin 2024</p>
+                        <p>Développement de modèles d'analyse de sentiments et d'extraction d'opinions appliqués à des bases de données textuelles complexes.</p>
+                    </div>
                     <div class="tech-tags">
                         <span class="tag">RStudio</span>
                         <span class="tag">Python</span>
@@ -170,20 +179,24 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>Modèle Linéaire Généralisé appliqué</h3>
-                    <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Juillet 2025</p>
-                    <p>Analyses statistiques de données médicales et environnementales (régression multiple, logistique) et restitution visuelle des résultats.</p>
+                    <div>
+                        <h3>Modèle Linéaire Généralisé appliqué</h3>
+                        <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Juillet 2025</p>
+                        <p>Analyses statistiques de données médicales et environnementales (régression multiple, logistique) et restitution visuelle des résultats.</p>
+                    </div>
                     <div class="tech-tags">
                         <span class="tag">Statistiques</span>
                         <span class="tag">RStudio</span>
-                        <span class="tag">Prédictions</span>
+                        <span class="tag">Power BI</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Deep Learning pour la Classification</h3>
-                    <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Projet de fin d'études - Licence</p>
-                    <p>Recherche et développement d'un classifieur basé sur des réseaux de neurones artificiels appliqués à la reconnaissance de données.</p>
+                    <div>
+                        <h3>Deep Learning pour la Classification</h3>
+                        <p style="font-size: 0.85em; color: #64748b; margin-bottom: 10px;">Projet de fin d'études - Licence</p>
+                        <p>Recherche et développement d'un classifieur basé sur des réseaux de neurones artificiels appliqués à la reconnaissance de données.</p>
+                    </div>
                     <div class="tech-tags">
                         <span class="tag">Deep Learning</span>
                         <span class="tag">Python</span>
